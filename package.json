@@ -1,12 +1,14 @@
 {
   "name": "color-slider",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license" : "MIT",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -19,7 +21,11 @@
       "enzyme-to-json/serializer"
     ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+      "src/**/*.{js,jsx}",
+      "!node_modules/**/**",
+      "!public/**/**",
+      "!src/index.js",
+      "!src/registerServiceWorker.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -30,7 +36,9 @@
       }
     },
     "coverageReporters": [
-      "text-summary"
+      "text-summary",
+      "lcov",
+      "json"
     ]
   },
   "devDependencies": {
