@@ -3,7 +3,6 @@
  */
 
 import React from "react";
-import { test, expect } from "jest";
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
