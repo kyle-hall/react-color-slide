@@ -1,13 +1,20 @@
 
-import React from "react";
-import "./Color.css";
+import React from "react"
 
 class Color extends React.Component {
+
   render() {
+    const colorStyles = {
+      height: "250px",
+      width: "150px",
+      backgroundColor: this.props.color,
+      marginRight: "10px"
+    }
+
     return (
-      <div><p>color</p></div>
-    );
+      <div style={colorStyles}></div>
+    )
   }
 }
 
-export default Color;
+export default Color

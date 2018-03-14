@@ -4,15 +4,26 @@ import Color from "../color/Color";
 
 class ColorSlide extends React.Component {
   render() {
+    const slideStyles = {
+      display: "flex",
+      justifyContent: "center"
+    }
+
+    const colorContainerStyles = {
+      display: "flex",
+      justifyContent: "space-around"
+    }
+
     return (
-      <div>
-        <h3>Color Slide works.</h3>
-        <Color />
-        <Color />
-        <Color />
-        <Color />
-        <Color />
-        <Color />
+      <div style={slideStyles}>
+        <div className="color-container" style={colorContainerStyles}>
+          <Color color="red" />
+          <Color color="orange"/>
+          <Color color="yellow"/>
+          <Color color="green"/>
+          <Color color="blue"/>
+          <Color color="violet"/>
+        </div>
       </div>
     );
   }
