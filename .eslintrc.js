@@ -23,10 +23,9 @@ module.exports = {
             "error",
             "double"
         ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "no-undef": "warn"
+        "no-undef": "warn",
+        "react/prop-types": [
+            1
+        ]
     }
 };
