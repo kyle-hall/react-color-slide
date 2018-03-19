@@ -2,6 +2,7 @@ import React from "react"
 import logo from "./logo.svg"
 import "./App.css"
 import ColorSlide from "./color-slide/ColorSlide"
+import ColorDisplay from "./color-display/ColorDisplay"
 
 class App extends React.Component {
   render() {
@@ -14,9 +15,10 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <ColorDisplay />
         <ColorSlide />
       </div>
-    );
+    )
   }
 }
 

@@ -11,13 +11,18 @@ import Color from "../color/Color"
 
 Enzyme.configure({ adapter: new Adapter() })
 
-test("ColorSlide should render without crashing", () => {
-  const slide = shallow(<ColorSlide />)
-  expect(slide).toBeTruthy()
-})
+describe("ColorSlide", () => {
+  let slide
 
-test("ColorSlide should contain 6 colors", () => {
-  const slide = shallow(<ColorSlide />)
+  beforeEach(() => {
+    slide = shallow(<ColorSlide />)
+  })
 
-  expect(slide.find(Color).length).toEqual(6)
+  test("ColorSlide should render without crashing", () => {
+    expect(slide).toBeTruthy()
+  })
+
+  test("ColorSlide should contain 6 colors", () => {
+    expect(slide.find(Color).length).toEqual(6)
+  })
 })
