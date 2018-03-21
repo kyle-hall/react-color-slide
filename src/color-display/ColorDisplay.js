@@ -4,9 +4,15 @@ import Color from "../color/Color"
 
 class ColorDisplay extends Component {
   render() {
+    const displayStyles = {
+      display: "flex",
+      justifyContent: "center",
+      marginBottom: "25px"
+    }
+
     return (
-      <div>
-        <Color />
+      <div style={displayStyles}>
+        <Color color={this.props.color}/>
       </div>
     )
   }
