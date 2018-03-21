@@ -30,4 +30,8 @@ describe("App", () => {
   test("should contain one ColorDisplay", () => {
     expect(app.find(ColorDisplay).length).toEqual(1)
   })
+
+  test("should have initial state of color 'black'", () => {
+    expect(app.instance().state.color).toEqual("#111111")
+  })
 })
