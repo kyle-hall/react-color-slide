@@ -1,15 +1,17 @@
 import React from "react"
 import logo from "./logo.svg"
 import "./App.css"
+
 import ColorSlide from "./color-slide/ColorSlide"
 import ColorDisplay from "./color-display/ColorDisplay"
+import { BLACK } from "./constants/color-codes"
 
 class App extends React.Component {
 
   constructor() {
     super()
     this.state = {
-      color: "#111111"
+      color: BLACK
     }
   }
 
@@ -18,11 +20,9 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Color Slide</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h2>Click on a color to see the display change.</h2>
         <ColorDisplay color={this.state.color}/>
         <ColorSlide />
       </div>

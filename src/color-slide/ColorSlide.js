@@ -1,13 +1,14 @@
 import React from "react"
 import "./ColorSlide.css"
 import Color from "../color/Color"
+import { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE } from "../constants/color-codes"
 
 class ColorSlide extends React.Component {
 
   constructor() {
     super()
     this.state = {
-      colors: ["#FF4136", "#FF851B", "#FFDC00", "#2ECC40", "#0074D9", "#B10DC9"]
+      colors: [RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE]
     }
   }
 
