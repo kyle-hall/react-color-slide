@@ -18,11 +18,35 @@ describe("ColorSlide", () => {
     slide = shallow(<ColorSlide />)
   })
 
-  test("ColorSlide should render without crashing", () => {
+  test("should render without crashing", () => {
     expect(slide).toBeTruthy()
   })
 
-  test("ColorSlide should contain 6 colors", () => {
+  test("should contain 6 colors", () => {
     expect(slide.find(Color).length).toEqual(6)
+  })
+
+  test("should contain a Color component that is red", () => {
+    expect(slide.find(Color).get(0).props.color).toEqual("#FF4136")
+  })
+
+  test("should contain a Color component that is orange", () => {
+    expect(slide.find(Color).get(1).props.color).toEqual("#FF851B")
+  })
+
+  test("should contain a Color component that is yellow", () => {
+    expect(slide.find(Color).get(2).props.color).toEqual("#FFDC00")
+  })
+
+  test("should contain a Color component that is green", () => {
+    expect(slide.find(Color).get(3).props.color).toEqual("#2ECC40")
+  })
+
+  test("should contain a Color component that is blue", () => {
+    expect(slide.find(Color).get(4).props.color).toEqual("#0074D9")
+  })
+
+  test("should contain a Color component that is purple", () => {
+    expect(slide.find(Color).get(5).props.color).toEqual("#B10DC9")
   })
 })
