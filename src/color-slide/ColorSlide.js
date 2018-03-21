@@ -1,8 +1,17 @@
 import React from "react"
 import "./ColorSlide.css"
 import Color from "../color/Color"
+import { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE } from "../constants/color-codes"
 
 class ColorSlide extends React.Component {
+
+  constructor() {
+    super()
+    this.state = {
+      colors: [RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE]
+    }
+  }
+
   render() {
     const slideStyles = {
       display: "flex",
@@ -17,12 +26,7 @@ class ColorSlide extends React.Component {
     return (
       <div style={slideStyles}>
         <div className="color-container" style={colorContainerStyles}>
-          <Color color="#FF4136"/>
-          <Color color="#FF851B"/>
-          <Color color="#FFDC00"/>
-          <Color color="#2ECC40"/>
-          <Color color="#0074D9"/>
-          <Color color="#B10DC9"/>
+          {this.state.colors.map(color => <Color key={color} color={color}/>)}
         </div>
       </div>
     )
