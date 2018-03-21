@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
     "extends": [
         "eslint:recommended",
@@ -15,6 +16,10 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "semi": [
+            2,
+            "never"
+        ],
         "indent": [
             "error",
             2
@@ -23,6 +28,7 @@ module.exports = {
             "error",
             "double"
         ],
+        "no-console": "warn",
         "no-undef": "warn",
         "react/prop-types": [
             1

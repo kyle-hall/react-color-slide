@@ -2,8 +2,17 @@ import React from "react"
 import logo from "./logo.svg"
 import "./App.css"
 import ColorSlide from "./color-slide/ColorSlide"
+import ColorDisplay from "./color-display/ColorDisplay"
 
 class App extends React.Component {
+
+  constructor() {
+    super()
+    this.state = {
+      color: "#111111"
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -14,9 +23,10 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <ColorDisplay color={this.state.color}/>
         <ColorSlide />
       </div>
-    );
+    )
   }
 }
 

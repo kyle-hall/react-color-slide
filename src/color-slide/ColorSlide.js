@@ -1,6 +1,6 @@
-import React from "react";
-import "./ColorSlide.css";
-import Color from "../color/Color";
+import React from "react"
+import "./ColorSlide.css"
+import Color from "../color/Color"
 
 class ColorSlide extends React.Component {
   render() {
@@ -17,16 +17,16 @@ class ColorSlide extends React.Component {
     return (
       <div style={slideStyles}>
         <div className="color-container" style={colorContainerStyles}>
-          <Color color="red" />
-          <Color color="orange"/>
-          <Color color="yellow"/>
-          <Color color="green"/>
-          <Color color="blue"/>
-          <Color color="violet"/>
+          <Color color="#FF4136"/>
+          <Color color="#FF851B"/>
+          <Color color="#FFDC00"/>
+          <Color color="#2ECC40"/>
+          <Color color="#0074D9"/>
+          <Color color="#B10DC9"/>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default ColorSlide;
+export default ColorSlide
