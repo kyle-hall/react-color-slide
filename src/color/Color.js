@@ -7,8 +7,7 @@ class Color extends React.Component {
     const colorStyles = {
       height: "250px",
       width: "150px",
-      backgroundColor: this.props.color,
-      marginRight: "10px"
+      backgroundColor: this.props.color
     }
 
     return (
