@@ -17,7 +17,7 @@ module.exports = {
     },
     "rules": {
         "semi": [
-            2, 
+            2,
             "never"
         ],
         "indent": [
@@ -28,6 +28,7 @@ module.exports = {
             "error",
             "double"
         ],
+        "no-console": "warn",
         "no-undef": "warn",
         "react/prop-types": [
             1
