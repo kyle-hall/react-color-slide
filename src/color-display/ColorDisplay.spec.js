@@ -8,6 +8,7 @@ import Adapter from "enzyme-adapter-react-16"
 
 import ColorDisplay from "./ColorDisplay"
 import Color from "../color/Color"
+import { BLACK } from "../constants/color-codes"
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -30,15 +31,15 @@ describe("ColorDisplay", () => {
 
   describe("props", () => {
     beforeEach(() => {
-      display = shallow(<ColorDisplay color="#111111" />)
+      display = shallow(<ColorDisplay color={BLACK} />)
     })
 
     test("should receive a color string to pass to its color component", () => {
-      expect(display.instance().props.color).toEqual("#111111")
+      expect(display.instance().props.color).toEqual(BLACK)
     })
 
     test("should pass a color to the Color component", () => {
-      expect(display.find(Color).get(0).props.color).toEqual("#111111")
+      expect(display.find(Color).get(0).props.color).toEqual(BLACK)
     })
   })
 })
