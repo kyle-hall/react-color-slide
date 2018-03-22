@@ -8,6 +8,7 @@ import Adapter from "enzyme-adapter-react-16"
 
 import ColorSlide from "./ColorSlide"
 import Color from "../color/Color"
+import { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE } from "../constants/color-codes"
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -27,27 +28,27 @@ describe("ColorSlide", () => {
   })
 
   test("should contain a Color component that is red", () => {
-    expect(slide.find(Color).get(0).props.color).toEqual("#FF4136")
+    expect(slide.find(Color).get(0).props.color).toEqual(RED)
   })
 
   test("should contain a Color component that is orange", () => {
-    expect(slide.find(Color).get(1).props.color).toEqual("#FF851B")
+    expect(slide.find(Color).get(1).props.color).toEqual(ORANGE)
   })
 
   test("should contain a Color component that is yellow", () => {
-    expect(slide.find(Color).get(2).props.color).toEqual("#FFDC00")
+    expect(slide.find(Color).get(2).props.color).toEqual(YELLOW)
   })
 
   test("should contain a Color component that is green", () => {
-    expect(slide.find(Color).get(3).props.color).toEqual("#2ECC40")
+    expect(slide.find(Color).get(3).props.color).toEqual(GREEN)
   })
 
   test("should contain a Color component that is blue", () => {
-    expect(slide.find(Color).get(4).props.color).toEqual("#0074D9")
+    expect(slide.find(Color).get(4).props.color).toEqual(BLUE)
   })
 
   test("should contain a Color component that is purple", () => {
-    expect(slide.find(Color).get(5).props.color).toEqual("#B10DC9")
+    expect(slide.find(Color).get(5).props.color).toEqual(PURPLE)
   })
 
   test("should receive a click handler as a prop and call it when clicked", () => {
