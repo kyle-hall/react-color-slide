@@ -4,7 +4,7 @@ import "./App.css"
 
 import ColorSlide from "./color-slide/ColorSlide"
 import ColorDisplay from "./color-display/ColorDisplay"
-import { BLACK } from "./constants/color-codes"
+import { BLACK, RED } from "./constants/color-codes"
 
 class App extends React.Component {
 
@@ -13,6 +13,13 @@ class App extends React.Component {
     this.state = {
       color: BLACK
     }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.setState({
+      color: RED
+    })
   }
 
   render() {
@@ -24,7 +31,7 @@ class App extends React.Component {
         </header>
         <h2>Click on a color to see the display change.</h2>
         <ColorDisplay color={this.state.color}/>
-        <ColorSlide />
+        <ColorSlide onClick={this.handleClick}/>
       </div>
     )
   }

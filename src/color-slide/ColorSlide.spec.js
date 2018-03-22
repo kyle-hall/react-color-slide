@@ -49,4 +49,11 @@ describe("ColorSlide", () => {
   test("should contain a Color component that is purple", () => {
     expect(slide.find(Color).get(5).props.color).toEqual("#B10DC9")
   })
+
+  test("should receive a click handler as a prop and call it when clicked", () => {
+    const onClick = jest.fn()
+    slide = shallow(<ColorSlide onClick={onClick} />)
+    slide.instance().handleClick()
+    expect(onClick).toBeCalled()
+  })
 })

@@ -9,6 +9,7 @@ import Adapter from "enzyme-adapter-react-16"
 import App from "./App"
 import ColorSlide from "./color-slide/ColorSlide"
 import ColorDisplay from "./color-display/ColorDisplay"
+import { BLACK, RED } from "./constants/color-codes"
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -32,6 +33,11 @@ describe("App", () => {
   })
 
   test("should have initial state of color 'black'", () => {
-    expect(app.instance().state.color).toEqual("#111111")
+    expect(app.instance().state.color).toEqual(BLACK)
+  })
+
+  test("should handle clicks by changing the display's color", () => {
+    app.find(ColorSlide).simulate("click")
+    expect(app.find(ColorDisplay).get(0).props.color).toEqual(RED)
   })
 })
